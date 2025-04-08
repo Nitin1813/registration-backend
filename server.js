@@ -5,7 +5,10 @@ const axios = require('axios');
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: '*' // allow only this origin
+  // origin: '*'  // or allow all origins (not recommended for production)
+}));
 app.use(express.json());
 
 app.post('/api/fetch-data', async (req, res) => {
