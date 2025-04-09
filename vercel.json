@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/fetch-data.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/fetch-data", "dest": "api/fetch-data.js" }
+    ]
+  }
+  
